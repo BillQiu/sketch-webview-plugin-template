@@ -1,0 +1,19 @@
+{
+    "name": "Sketch TEMPLATE",
+    "identifier": "cm.sketch.TEMPLATE",
+    "compatibleVersion": 3,
+    "bundleVersion": 1,
+    "icon": "icon.png",
+    "commands": [
+        {
+            "name": "TEMPLATE",
+            "script": "index.js",
+            "identifier": "sketch-TEMPLATE"
+        }
+    ],
+    "menu": {
+        "title": "TEMPLATE",
+        "isRoot": true,
+        "items": ["sketch-TEMPLATE"]
+    }
+}

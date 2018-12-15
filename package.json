@@ -1,0 +1,40 @@
+{
+    "name": "sketch-webview-plugin-template",
+    "version": "0.0.1",
+    "description": "quick start to dev sketch plugin",
+    "main": "index.js",
+    "engines": {
+        "sketch": ">=3.0"
+    },
+    "scripts": {
+        "build": "skpm-build",
+        "start:plugin": "skpm-build --watch",
+        "postinstall": "npm run build && skpm-link"
+    },
+    "skpm": {
+        "name": "sketch-TEMPLATE",
+        "manifest": "src/manifest.json",
+        "main": "SketchTemplate.sketchplugin",
+        "assets": [
+            "dist/**/*"
+        ]
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/BillQiu/sketch-webview-plugin-template.git"
+    },
+    "keywords": [],
+    "author": "Bill Qiu",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/BillQiu/sketch-webview-plugin-template/issues"
+    },
+    "homepage": "https://github.com/BillQiu/sketch-webview-plugin-template#readme",
+    "devDependencies": {
+        "@skpm/builder": "^0.5.12",
+        "husky": "^1.2.1",
+        "prettier": "^1.15.3",
+        "sketch-module-web-view": "^0.2.6",
+        "pretty-quick": "^1.8.0"
+    }
+}
