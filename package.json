@@ -8,6 +8,7 @@
     },
     "scripts": {
         "build": "skpm-build",
+        "start:panel": "cd panel && umi start",
         "start:plugin": "skpm-build --watch",
         "postinstall": "npm run build && skpm-link"
     },
