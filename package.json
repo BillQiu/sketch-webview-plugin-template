@@ -1,6 +1,6 @@
 {
     "name": "sketch-webview-plugin-template",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "description": "quick start to dev sketch plugin",
     "main": "index.js",
     "engines": {
