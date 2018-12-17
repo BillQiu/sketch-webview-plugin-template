@@ -4,13 +4,20 @@
     "description": "quick start to dev sketch plugin",
     "main": "index.js",
     "engines": {
-        "sketch": ">=3.0"
+        "sketch": ">=3.0",
+        "node": ">=8.0"
     },
     "scripts": {
+        "start": "concurrently \"yarn start:panel\" \"yarn start:plugin\"",
         "build": "skpm-build",
-        "start:panel": "cd panel && umi start",
+        "start:panel": "cd panel && umi dev",
         "start:plugin": "skpm-build --watch",
         "postinstall": "npm run build && skpm-link"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "pretty-quick --staged"
+        }
     },
     "skpm": {
         "name": "sketch-TEMPLATE",
@@ -33,10 +40,11 @@
     "homepage": "https://github.com/BillQiu/sketch-webview-plugin-template#readme",
     "devDependencies": {
         "@skpm/builder": "^0.5.12",
+        "concurrently": "^4.1.0",
         "husky": "^1.2.1",
         "prettier": "^1.15.3",
-        "sketch-module-web-view": "^0.2.6",
         "pretty-quick": "^1.8.0",
+        "sketch-module-web-view": "^0.2.6",
         "umi": "^2.1.2",
         "umi-plugin-react": "^1.1.1"
     }
